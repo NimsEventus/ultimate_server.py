@@ -1,4 +1,3 @@
-cat > loc_server.py << 'ENDOFFILE'
 #!/usr/bin/env python3
 from flask import Flask, request, Response, redirect
 import json, os, socket, base64, urllib.parse, hashlib
@@ -380,4 +379,3 @@ if __name__ == '__main__':
     print("  " + "─"*50 + "\n")
     
     app.run(host='0.0.0.0', port=5000, debug=False, threaded=True)
-ENDOFFILE
