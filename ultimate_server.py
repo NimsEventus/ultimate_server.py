@@ -1,4 +1,3 @@
-<< 'ENDOFFILE'
 #!/usr/bin/env python3
 """
 ==================================================
@@ -731,4 +730,3 @@ if __name__ == '__main__':
     print("  " + "─"*58 + "\n")
     
     app.run(host='0.0.0.0', port=5000, debug=False, threaded=True)
-ENDOFFILE
