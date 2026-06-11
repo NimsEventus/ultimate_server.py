@@ -1,4 +1,4 @@
-cat > ultimate_server.py << 'ENDOFFILE'
+<< 'ENDOFFILE'
 #!/usr/bin/env python3
 """
 ==================================================
